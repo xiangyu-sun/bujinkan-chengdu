@@ -1,0 +1,417 @@
+<html>
+
+<head>
+  <title>Bujinkan Chengdu</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/jquery/3.1.1/core.js"></script>
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="http://webapi.amap.com/maps?v=1.3&key=8325164e247e15eea68b59e89200988b"></script>
+  <style>
+    body {
+       font: "Microsoft YaHei", "Helvetica Neue", "Sans-Serif"
+       position: relative; 
+    }
+    
+    .my-map { width: 600px; height: 600px; }
+    .my-map .icon { background: url(http://lbs.amap.com/console/public/show/marker.png) no-repeat; }
+    .my-map .icon-cir { height: 31px; width: 28px; }
+    .my-map .icon-cir-red { background-position: -11px -5px; }
+    .amap-container{height: 500px;}
+
+    p{
+        font-size: 20px;
+    }
+    
+    .information{
+      font-size: 20px
+    }
+     .block-body{
+        margin-top : 20px
+     }
+    li,dt,dd{
+      font-size: 20px
+    }
+    
+
+
+    #section1 {padding-top:50px;height:100%;color: #fff; background-color: #000;}
+    #section21 {padding-top:50px;height:100%;color: #fff; background-color: #343434;}
+     #section22 {padding-top:50px;height:500px;color: #fff; background-color: #242124;}
+     #section23 {padding-top:50px;height:500px;color: #fff; background-color: #1B1B1B;}
+    #section3 {padding-top:50px;height:100%;color: #fff; background-color: #1A1110;}
+    #section41 {padding-top:50px;height:500px;color: #fff; background-color: #00bcd4;}
+    #section42 {padding-top:50px;height:500px;color: #fff; background-color: #009688;}
+     #section5 {padding-top:50px;height:100%;color: #fff; background-color: #483C32;}
+      #section6 {padding-top:50px;height:100%;color: #fff; background-color: #483C32;
+    }
+    #section6  .grid, #section5 .grid,
+    footer #footer-above {
+  display:flex;
+  flex-flow:row wrap;
+  justify-content:space-around;
+  align-items:flex-start;
+  margin:0 auto; 
+}
+    
+      #section6  .grid, #section5 .grid{
+      padding:0;
+      max-width: 90%;
+      list-style: none; 
+      margin-top:20px;
+    }
+     #section6  .grid  li,#section5  .grid  li {
+      margin:20px;
+      max-width:600px;
+      @media(min-width:1023px) {
+        max-width:420px;
+        }
+      }
+    
+     #section6  img {
+      max-width:100%;
+      height:auto;
+      display:block;
+    }
+    
+    
+    html,body{margin:0;padding:0;}
+    .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+    .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+    
+    footer {
+  color: #f00;
+  background-color: #000;
+  text-align:center;
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.2);
+
+}
+
+footer h3 {
+  padding-top:30px;
+  margin-bottom:30px;
+  color:#990000;
+}
+#footer-above {
+    padding-top:50px;
+    margin-bottom:50px;
+ }    
+    
+#footer-below {
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.2);
+    padding:25px 0;
+    background-color:#000;
+    text-align:center;
+}
+
+.button {
+  color: #990000;
+  border:solid 2px #990000;
+  border-radius:50%;
+  display:inline-block;
+  width:50px;
+  height:50px;
+  text-align:center;
+  font-size:20px;
+  line-height:48px;
+  transition:all .3s ease-in-out;
+  
+}
+
+.button:hover {
+    border:solid 2px #fff;
+    color:#fff;
+    background: #990000;
+  }
+    
+  </style>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+      </button>
+        <a class="navbar-brand" href="#">Bujinkan Chengdu</a>
+      </div>
+      <div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="#section1">School</a></li>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Where & When & How much<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#section21">Location</a></li>
+                <li><a href="#section22">Class Schedule</a></li>
+                <li><a href="#section23">Charging</a></li>
+              </ul>
+            </li>
+            <li><a href="#section3">Instructor</a></li>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Promotions<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#section41">Alduts</a></li>
+                <li><a href="#section42">Children</a></li>
+              </ul>
+            </li>
+            <li><a href="#section5">Contact</a></li>
+            <li><a href="#section5">Class Pictures</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div id="section1" class="container-fluid">
+    <h1>Bujinkan Chengdu & Budo Taijutsu</h1>
+    <div class="block-body">
+      <div class="row">
+        <div class="col-xs-8">
+          <h2>Bujinkan</h2>
+          <p>The Bujinkan (武神館) is an international martial arts organization based in Japan and headed by Masaaki Hatsumi. The combat system taught by this organization comprises nine separate ryūha, or schools, which are collectively referred to as Bujinkan
+            Budō Taijutsu. The Bujinkan is most commonly associated with ninjutsu. However, Masaaki Hatsumi uses the term Budo (meaning martial way) as he says the ryūha are descended from historical samurai schools that teach samurai martial tactics
+            and ninjutsu schools that teach ninja tactics.
+          </p>
+          <p>This training is conducted in a manner in which there are predefined "attackers" (tori) and "receivers" (uke) similar to drills in judo (gokyo) or traditional Japanese martial arts. However, the Bujinkan differs from many traditional martial
+            arts in that the training progresses through the following stages:</p>
+          <ul>
+            <li>Predefined sets of movements (kata) and physical conditioning</li>
+            <li>Variations to the fixed drills (henka), responding to changes in the attacker's movements or situation</li>
+            <li>Free form training (randori) consisting mostly of spur-of-the-moment, dynamic techniques during which the defender hits, locks, chokes or throws the attacker in a controlled and safe manner</li>
+            <li>More advanced training consists of controlling the attacker's mind using various techniques such as pain compliance and deception</li>
+            <ul>
+        </div>
+        <div class="col-xs-4">
+          <img class="img-responsive" src="https://i1.wp.com/www.wayofninja.com/wp-content/uploads/2009/03/600px-buj-logo-300x300.png?resize=300%2C300">
+        </div>
+      </div>
+      <h2> Taijutsu</h2>
+      <p> Taijutsu (body combat art) is the Bujinkan system of unarmed defence using strikes, throws, holds, chokes and joint locks. It encompases skill such as: koppo jutsu is the "way of attacking and/or using the skeletal structure"; “koshi jutsu” is the
+        way of attacking muscles and weak points on the body; jutai jutsu is the "relaxed body method" teaching throwing, grappling and choking techniques and dakentai jutsu which emphasises strikes, kicks and blocks The first levels of training, such
+        as leaping, tumbling, break fall techniques and body conditioning, form the basis for taijutsu. They are needed to progress into other techniques such as unarmed combat and the use of tools and weapons. Once learned, Taijutsu techniques can be
+        applied to any situation, armed or unarmed.</p>
+      <h2>Bujinkan Chengdu</h2>
+      <div class="row">
+        <div class="col-xs-8">
+          <p> Welcome to Chengdu Bujinkan budo Taijutsu!</p>
+
+          <p>Bujinkan Budo Taijutsu is a series of martial arts schools (ryu) that have been complied and are currently being “transmitted” in Japan by Soke Hatsumi Masaaki. A majority of the schools are traditional samurai fighting arts that have been handed
+            down for generations.</p>
+
+          <p>We teach adult classes on Mondays and Wednesdays and kids classes on Wednesdays. During the summer we often meet outdoors to train on the weekends. </p>
+
+          <p>We use weapons, we do throws. We do some groundwork, though not much as we primarily focus on how to get back to standing as fast as possible as most of the art was developed on a battlefield with multiple opponents trying to kill each other.
+            We do striking which includes but isn't limited to, punching, kicking, knees, elbows and other body strikes.
+            <p>Expect to start with learning how to roll and hit the floor without getting injured, then move into striking, then releases from grabs, then joint locks such as wrist twists, and elbow locks, and then throws. We always relearn the basics and
+              as a whole (teacher and students alike), we help each other get to where we need to be. Expect a relatively safe environment with great and fun people. Expect to make friends for a lifetime.</p>
+
+            <p>We look forward to meeting you soon!
+            </p>
+        </div>
+        <div class="col-xs-4">
+          <img class="img-responsive" src="http://p1.bpimg.com/582376/9767d26d63fcca9e.jpg">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="section21" class="container-fluid">
+    <h1>Location</h1>
+    <div class="block-body row">
+      <div class="col-xs-6">
+        <address class="information">
+  成都市，青羊区<br>
+  长顺中街长发街99号三楼<br>
+  无限流武道研修部<br>
+  </address>
+      </div>
+      <div class="col-xs-6">
+        <div id="wrap" class="my-map">
+          <div id="mapContainer"></div>
+        </div>
+      </div>
+      <script>
+        !function(){
+            var infoWindow, map, level = 18,
+                center = {lng: 104.056553, lat: 30.666771},
+                features = [{type: "Marker", name: "无限流武道研修部", desc: "少城府邸黄瓦街入口", color: "red", icon: "cir", offset: {x: -9, y: -31}, lnglat: {lng: 104.056553, lat: 30.666771}}];
+     
+            function loadFeatures(){
+                for(var feature, data, i = 0, len = features.length, j, jl, path; i < len; i++){
+                    data = features[i];
+                    switch(data.type){
+                        case "Marker":
+                            feature = new AMap.Marker({ map: map, position: new AMap.LngLat(data.lnglat.lng, data.lnglat.lat),
+                                zIndex: 3, extData: data, offset: new AMap.Pixel(data.offset.x, data.offset.y), title: data.name,
+                                content: '<div class="icon icon-' + data.icon + ' icon-'+ data.icon +'-' + data.color +'"></div>' });
+                            break;
+                        case "Polyline":
+                            for(j = 0, jl = data.lnglat.length, path = []; j < jl; j++){
+                                path.push(new AMap.LngLat(data.lnglat[j].lng, data.lnglat[j].lat));
+                            }
+                            feature = new AMap.Polyline({ map: map, path: path, extData: data, zIndex: 2,
+                                strokeWeight: data.strokeWeight, strokeColor: data.strokeColor, strokeOpacity: data.strokeOpacity });
+                            break;
+                        case "Polygon":
+                            for(j = 0, jl = data.lnglat.length, path = []; j < jl; j++){
+                                path.push(new AMap.LngLat(data.lnglat[j].lng, data.lnglat[j].lat));
+                            }
+                            feature = new AMap.Polygon({ map: map, path: path, extData: data, zIndex: 1,
+                                strokeWeight: data.strokeWeight, strokeColor: data.strokeColor, strokeOpacity: data.strokeOpacity,
+                                fillColor: data.fillColor, fillOpacity: data.fillOpacity });
+                            break;
+                        default: feature = null;
+                    }
+                    if(feature){ AMap.event.addListener(feature, "click", mapFeatureClick); }
+                }
+            }
+     
+            function mapFeatureClick(e){
+                if(!infoWindow){ infoWindow = new AMap.InfoWindow({autoMove: true}); }
+                var extData = e.target.getExtData();
+                infoWindow.setContent("<h5>" + extData.name + "</h5><div>" + extData.desc + "</div>");
+                infoWindow.open(map, e.lnglat);
+            }
+     
+            map = new AMap.Map("mapContainer", {center: new AMap.LngLat(center.lng, center.lat), level: level});
+            new AMap.TileLayer.Traffic({map: map, zIndex: 2});
+            new AMap.Buildings({map: map, zIndex: 3});
+            loadFeatures();
+     
+            map.on('complete', function(){
+                map.plugin(["AMap.ToolBar", "AMap.OverView", "AMap.Scale"], function(){
+                    map.addControl(new AMap.ToolBar);
+                map.addControl(new AMap.OverView({isOpen: true}));
+                map.addControl(new AMap.Scale);
+                });
+            })
+             
+        }();
+      </script>
+
+    </div>
+  </div>
+  <div id="section22" class="container-fluid">
+    <h1>Class Schedule</h1>
+    <div class="block-body">
+      <ul>
+        <li>Monday 20:00 - 22:00</li>
+        <li>Wendnesday 19:30 - 21:30</li>
+        <li>Saturday <em>come to class and you will know it</em></li>
+      </ul>
+    </div>
+  </div>
+  <div id="section23" class="container-fluid">
+    <h1>Charging</h1>
+    <div class="block-body information">
+      <dl>
+        <dt>Adult training pack</dt>
+        <dd> threes months with total <strong> 1800</strong> RMB</dd>
+        <dt>Adult expierencing pack</dt>
+        <dd> <strong> 800</strong> RMB for 10 classes, <strong>valid within three months!</strong></dd>
+      </dl>
+    </div>
+  </div>
+  <div id="section3" class="container-fluid">
+    <h1>Robert Worth</h1>
+    <div class="block-body">
+      <div class="row">
+        <div class="col-xs-8">
+          <p>Robert Worth 6th degree blackbelt, is from the United States and has been training in martial arts since the age of 7 years old. He has experience training military and private security personnel in the United States. Robert came to China with
+            a school student exchange program when he was 12, he has taken a great interest in Chineses culture and Estern culture since then. This is one of the most important reasons he chose to live in China now. Robert is now living in Chengdu, and
+            teaching regular weekly budo taijutsu classes.</p>
+          <blockquote>
+            <p>Bujinkan Budo Taijutsu is a martial art based on whole body movement. It focuses on using effective techniques against an opponent’s weak points to efficiently negate a dangerous encounter. The student learns how to use the entire body (armed
+              or unarmed) in execution of these techniques making it ideal against larger and stronger opponents. Budo Taijutsu is great for self defense and for conditioning of the body, the mind, of the warrior heart and of the immovable heart (不動心).</p>
+            <footer>Himself</footer>
+          </blockquote>
+        </div>
+        <div class="col-xs-4">
+          <img class="img-responsive" src="http://p1.bpimg.com/582376/39948c5146a967fa.jpg">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="section41" class="container-fluid">
+    <h1>Alduts Deals</h1>
+    <div class="block-body">
+      <p>Come to find out!</p>
+    </div>
+  </div>
+  <div id="section42" class="container-fluid">
+    <h1>Kids Deals</h1>
+    <div class="block-body">
+      <p>Come to find out!</p>
+    </div>
+  </div>
+  <div id="section5" class="container-fluid">
+    <h1>Contact</h1>
+    <div class="block-body row">
+
+
+      <ul class="grid">
+        <li>
+          <address class="information">
+  夏老师<br>
+  <abbr title="Phone">电话: </abbr> 15828065275<br>
+  <a href="mailto:#">first.last@example.com</a>
+          
+ </address>
+          <strong>微信联系<img class="img-responsive" alt="Loading" src="http://p1.bpimg.com/582376/fc8bb7a248c21854.jpg"></strong>
+        </li>
+        <li> <address class="information">
+  Robert Worth （潜剑）<br>
+  <abbr title="Phone">P: </abbr> 15108375382<br>
+  <a href="mailto:#">first.last@example.com</a><br>
+          
+     </address>
+          <strong>Add Wechat <img class="img-responsive" alt="Loading" src="http://p1.bpimg.com/582376/fc8bb7a248c21854.jpg"></strong>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+  <div id="section6" class="container-fluid">
+    <h1>Pictures</h1>
+    <div class="block-body">
+      <ul class="grid">
+        <li><img src='http://imgur.com/Wf07xBL.jpg' , alt=''></li>
+        <li><img src='http://imgur.com/TMEzP9i.jpg' , alt=''></li>
+        <li><img src='http://imgur.com/6kqr8Ql.jpg' , alt=''></li>
+        <li><img src='http://imgur.com/FwfeVfZ.jpg' , alt=''></li>
+        <li><img src='http://imgur.com/UigYj4W.jpg' , alt=''></li>
+        <li><img src='http://imgur.com/BOw05oQ.jpg' , alt=''></li>
+      </ul>
+
+    </div>
+  </div>
+
+  <footer>
+    <div id="footer-above">
+      <div>
+        <h3> Author - (Alex) Xiangyu Sun</h3>
+        <div class="btn-group" role="group" aria-label="...">
+          <a target="_blank" type="button" class="button" aria-hidden="true" href="https://github.com/xiangyu-sun"><i class = "fa fa-github"></i></a>
+          <a target="_blank" type="button" class="button" aria-hidden="true" href="https://www.facebook.com/alexander.luc.sun"><i class = "fa fa-facebook-official"></i></a>
+          <a id="github" target="_blank" type="button" class="button" aria-hidden="true" href="http://weibo.com/taistoi/home"><i class = "fa fa-weibo"></i></a>
+        </div>
+      </div>
+    </div>
+    <div id="footer-below">
+
+      | Uriphium ©
+      <script>
+        document.write(new Date().getFullYear())
+      </script>
+      | . All Rights Reversed
+
+    </div>
+  </footer>
+
+</body>
+
+</html>
