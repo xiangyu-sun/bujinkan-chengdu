@@ -8,7 +8,7 @@
     }
 
 
-.container-fluid,.row-fluid { height: inherit; }
+.container-fluid,.row-fluid { height: auto; }
 
 
     .my-map { width: 600px; height: 600px; }
@@ -30,16 +30,15 @@
       font-size: 20px
     }
 
-    
     #section1 {padding-top:50px;color: #fff; background-color: #000;}
     #section21 {padding-top:50px;height:800px;color: #fff; background-color: #343434;}
      #section22 {padding-top:50px;height:500px;color: #fff; background-color: #242124;}
      #section23 {padding-top:50px;height:500px;color: #fff; background-color: #1B1B1B;}
-    #section3 {padding-top:50px;height:700px;color: #fff; background-color: #1A1110;}
+    #section3 {padding-top:50px;color: #fff; background-color: #1A1110;}
     #section41 {padding-top:50px;height:500px;color: #fff; background-color: #00bcd4;}
     #section42 {padding-top:50px;height:500px;color: #fff; background-color: #009688;}
-     #section5 {padding-top:50px;height:800px;color: #fff; background-color: #483C32;}
-      #section6 {padding-top:50px;height:1800px;color: #fff; background-color: #483C32;}
+     #section5 {padding-top:50px;color: #fff; background-color: #483C32;}
+      #section6 {padding-top:50px;color: #fff; background-color: #483C32;}
 
 
       #section6  .grid, #section5 .grid{
