@@ -60,11 +60,6 @@
         }
       }
     
-     #section6  img {
-      max-width:100%;
-      height:auto;
-      display:block;
-    }
     
     html,body{margin:0;padding:0;}
     .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
@@ -90,12 +85,7 @@
     background: #990000;
   }
 
-  .thumb {
-    margin-bottom: 30px;
-  }
-  .thumbnail img{
-        max-height:380;
-  }
+
 
   footer {
     color:#fff;
