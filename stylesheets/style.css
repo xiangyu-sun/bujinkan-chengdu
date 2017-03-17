@@ -1,5 +1,5 @@
 p,li,dt,dd,address{
-  font-size: 10px;
+font-size: 10px;
 }
 
 @media(max-width: 480px) {
@@ -8,97 +8,97 @@ p,li,dt,dd,address{
 
 /* Small */
 @media(min-width:768px) and (max-width:991px){
-  p,li,dt,dd,address{
-    font-size: 12px;
-  }
+p,li,dt,dd,address{
+font-size: 12px;
+}
 }
 
 /* Medium */
 @media(min-width:992px) and (max-width:1199px){
-  p,li,dt,dd,address{
-    font-size: 16px;
-  }
+p,li,dt,dd,address{
+font-size: 16px;
+}
 }
 
 /* Large */
 @media(min-width:1200px){
-  p,li,dt,dd,address{
-    font-size: 20px;
-  }
+p,li,dt,dd,address{
+font-size: 20px;
 }
-
+}
 
 .container-fluid,.row-fluid { height: auto; }
 
 
-    .my-map { width: 600px; height: 600px; }
-    .my-map .icon { background: url(http://lbs.amap.com/console/public/show/marker.png) no-repeat; }
-    .my-map .icon-cir { height: 31px; width: 28px; }
-    .my-map .icon-cir-red { background-position: -11px -5px; }
-    .amap-container{height: 500px;}
+.my-map { width: 600px; height: 600px; }
+.my-map .icon { background: url(http://lbs.amap.com/console/public/show/marker.png) no-repeat; }
+.my-map .icon-cir { height: 31px; width: 28px; }
+.my-map .icon-cir-red { background-position: -11px -5px; }
+.amap-container{height: 500px;}
+
+.iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+.iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
 
 
 
 
+#section1 {padding-top:50px;color: #fff; background-color: #000;}
+#section21 {padding-top:50px;height:800px;color: #fff; background-color: #343434;}
+#section22 {padding-top:50px;height:500px;color: #fff; background-color: #242124;}
+#section23 {padding-top:50px;height:500px;color: #fff; background-color: #1B1B1B;}
+#section3 {padding-top:50px;color: #fff; background-color: #1A1110;}
+#section41 {padding-top:50px;height:300px;color: #fff; background-color: #00bcd4;}
+#section42 {padding-top:50px;height:300px;color: #fff; background-color: #009688;}
+#section5 {padding-top:50px;color: #fff; background-color: #483C32;}
+#section6 {padding-top:50px;color: #fff; background-color: #483C32;}
 
-    #section1 {padding-top:50px;color: #fff; background-color: #000;}
-    #section21 {padding-top:50px;height:800px;color: #fff; background-color: #343434;}
-     #section22 {padding-top:50px;height:500px;color: #fff; background-color: #242124;}
-     #section23 {padding-top:50px;height:500px;color: #fff; background-color: #1B1B1B;}
-    #section3 {padding-top:50px;color: #fff; background-color: #1A1110;}
-    #section41 {padding-top:50px;height:300px;color: #fff; background-color: #00bcd4;}
-    #section42 {padding-top:50px;height:300px;color: #fff; background-color: #009688;}
-     #section5 {padding-top:50px;color: #fff; background-color: #483C32;}
-      #section6 {padding-top:50px;color: #fff; background-color: #483C32;}
 
 
-      #section6  .grid, #section5 .grid{
-          display:flex;
-  flex-flow:row wrap;
-  justify-content:space-around;
-  align-items:flex-start;
-  margin:0 auto; 
-      padding:0;
-      max-width: 90%;
-      list-style: none; 
-      margin-top:20px;
-    }
-     #section6  .grid  li,#section5  .grid  li {
-      margin:20px;
-      max-width:600px;
-      @media(min-width:1023px) {
-        max-width:420px;
-        }
-      }
-    
-    
+#section5 .grid{
+display:flex;
+flex-flow:row wrap;
+justify-content:space-around;
+align-items:flex-start;
+margin:0 auto; 
+padding:0;
+max-width: 90%;
+list-style: none; 
+margin-top:20px;
+}
 
-    .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
-    .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
-    
+#section5  .grid  li {
+margin:20px;
+max-width:600px;
+@media(min-width:1023px) {
+max-width:420px;
+}
+}
+
+
+
+
 .button {
-  color: #990000;
-  border:solid 2px #990000;
-  border-radius:50%;
-  display:inline-block;
-  width:50px;
-  height:50px;
-  text-align:center;
-  line-height:48px;
-  transition:all .3s ease-in-out;
-  
+color: #990000;
+border:solid 2px #990000;
+border-radius:50%;
+display:inline-block;
+width:50px;
+height:50px;
+text-align:center;
+line-height:48px;
+transition:all .3s ease-in-out;
+
 }
 
 .button:hover {
-    border:solid 2px #fff;
-    color:#fff;
-    background: #990000;
+border:solid 2px #fff;
+color:#fff;
+background: #990000;
 }
 
 
 
-  footer {
-    color:#fff;
-    background-color: #483C32;
-  }
-    
+footer {
+color:#fff;
+background-color: #483C32;
+}
