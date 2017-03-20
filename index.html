@@ -5,8 +5,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <link rel="stylesheet" href="./stylesheets/style.css">
-  <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
-  <script src="http://webapi.amap.com/maps?v=1.3&key=8325164e247e15eea68b59e89200988b"></script>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -24,23 +22,31 @@
       <div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
-            <li><a href="#section1">School</a></li>
+
+            <li class="nav-item"><a href="#section1">School</a></li>
+
             <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Where & When & How much<span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#section21">Location</a></li>
-                <li><a href="#section22">Class Schedule</a></li>
-                <li><a href="#section23">Charging</a></li>
+                <li class="nav-item"><a href="#section21">Location</a></li>
+                <li class="nav-item"><a href="#section22">Adults</a></li>
+                <li class="nav-item"><a href="#section23">Children</a></li>
               </ul>
             </li>
-            <li><a href="#section3">Instructor</a></li>
+
+            <li class="nav-item"><a href="#section3">Instructor</a></li>
+
             <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Promotions<span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#section41">Alduts</a></li>
-                <li><a href="#section42">Children</a></li>
+                <li class="nav-item"><a href="#section41">Alduts</a></li>
+                <li class="nav-item"> <a href="#section42">Children</a></li>
               </ul>
             </li>
-            <li><a href="#section5">Contact</a></li>
-            <li><a href="#section5">Class Pictures</a></li>
+
+            <li class="nav-item"><a href="#section5">Contact</a></li>
+
+            <li class="nav-item"><a href="#section6">Class Pictures</a></li>
+
+
           </ul>
         </div>
       </div>
@@ -127,21 +133,25 @@
     </div>
   </div>
   <div id="section22" class="container-fluid">
-    <h1>Class Schedule</h1>
-    <ul>
-      <li>Monday 20:00 - 22:00</li>
-      <li>Wendnesday 19:30 - 21:30</li>
-      <li>Saturday <em>come to class and you will know it</em></li>
-    </ul>
+    <h1>Adults 成人</h1>
+        <div class="information">
+      <dl>
+        <dt>Monday 星期一 20:00 - 22:00</dt>
+      	<dt>Wendnesday 星期三 19:30 - 21:30</dt>
+        <dt>Option A 课程包A</dt>
+        <dd> threes months with total <strong> 1800</strong> RMB</dd>
+        <dt>Option B 课程包B</dt>
+        <dd> <strong> 800</strong> RMB for 10 classes, <strong>valid within three months!</strong></dd>
+      </dl>
+    </div>
   </div>
   <div id="section23" class="container-fluid">
-    <h1>Charging</h1>
-    <div class="information">
+    <h1>Children 少儿</h1>
+        <div class="information">
       <dl>
-        <dt>Adult training pack</dt>
-        <dd> threes months with total <strong> 1800</strong> RMB</dd>
-        <dt>Adult expierencing pack</dt>
-        <dd> <strong> 800</strong> RMB for 10 classes, <strong>valid within three months!</strong></dd>
+        <dt>Monday 星期一 19:00 - 20:00</dt>
+        <dt>Option A 课程包A</dt>
+        <dd> threes months with total <strong> xxxx</strong> RMB</dd>
       </dl>
     </div>
   </div>
@@ -169,14 +179,14 @@
 
     <div class="row-fluid">
       <h1>Alduts Deals</h1>
-      <p>Come to find out!</p>
+      <p>Nada, recently.</p>
     </div>
   </div>
   <div id="section42" class="container-fluid">
 
     <div class="row-fluid">
       <h1>Kids Deals</h1>
-      <p>Come to find out!</p>
+      <p>Nada, recently.</p>
     </div>
   </div>
   <div id="section5" class="container-fluid">
@@ -249,10 +259,11 @@
     </div>
   </footer>
 
-  
+<!--     <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+  <script src="http://webapi.amap.com/maps?v=1.3&key=8325164e247e15eea68b59e89200988b"></script>
   <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
       <script>
         !function(){
             var infoWindow, map, level = 18,
@@ -311,13 +322,14 @@
              
         }();
       </script>
- 
 
 
-<!--   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+  
 
 </body>
 
