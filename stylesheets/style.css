@@ -75,7 +75,9 @@ max-width:420px;
 }
 
 
-
+.information{
+	padding: 10px,0px,10px,0px;
+}
 
 .button {
 color: #990000;
